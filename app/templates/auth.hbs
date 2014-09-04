@@ -1,0 +1,16 @@
+<form {{action 'login' on='submit'}}>
+  <div {{bind-attr class='errors.username:has-error'}}>
+    <span>{{errors.username}}</span>
+    {{input value=username type='text' placeholder='Username'}}
+  </div>
+  <div {{bind-attr class='errors.password:has-error'}}>
+    <span>{{errors.password}}</span>
+    {{input value=password type='password' placeholder='Password'}}
+  </div>
+  {{#if errors.non_field_errors}}
+    <div>
+      <strong>Oops!</strong> {{errors.non_field_errors}}
+    </div>
+  {{/if}}
+    {{input type='submit' value='Log in'}}
+</form>

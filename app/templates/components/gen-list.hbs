@@ -1,0 +1,24 @@
+{{ columns }}
+{{rows}}
+
+<table class="{{class}}">
+  <thead>
+    {{#each columns}}
+      <th colspan="{{colspan}}"
+          class="{{class}}">
+        {{label}}
+      </th>
+    {{/each}}
+  </thead>
+  <tbody>
+    {{#each rows}}
+      <tr>
+        {{#each columns}}
+          <td class="{{cellclass}}">
+            {{ ../this }}
+          </td>
+        {{/each}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

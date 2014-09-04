@@ -1,0 +1,10 @@
+@import 'vendor/bootstrap-sass-official/assets/stylesheets/bootstrap';
+
+.page-header {
+    @extend .page-header;
+    margin-top: 10px;
+}
+
+body {
+    padding-top: 60px;
+}
